@@ -1,0 +1,33 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<div class="sidenav">
+  <div class="login-main-text">
+     <h2>Application<br> Login Page</h2>
+     <p>Login or register from here to access.</p>
+  </div>
+</div>
+<div class="main">
+    <div class="col-md-6 col-sm-12">
+  
+      <div class="login-form">
+        
+        <div class="formGroup">
+          <input type="text" class="formControl" placeholder="Username" #userName required>
+        </div>
+  
+        <div class="formGroup">
+          <input type="password" class="formControl" placeholder="Password" #userPassword required>
+        </div>
+  
+        <div class="formGroup">
+          <input type="button" class="btn btn-black" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
+        </div>
+  
+      <div class="redirectToLogin">
+        <span>Don't have an account?<a routerLink="/register-user"> Sign Up</a></span>
+      </div>
+  
+    </div>
+  </div>
+  
